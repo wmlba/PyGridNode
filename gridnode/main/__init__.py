@@ -12,7 +12,7 @@ from typing import Union
 
 from syft.serde import serialize, deserialize
 from syft.generic.frameworks.types import FrameworkTensor
-from syft.generic.object import AbstractObject
+from syft.generic.abstract.object import AbstractObject
 from syft.generic.pointers.pointer_tensor import PointerTensor
 
 # Global variables must be initialized here.

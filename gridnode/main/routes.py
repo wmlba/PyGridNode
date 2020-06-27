@@ -98,7 +98,7 @@ def show_status():
     )
     ids = map(lambda x: x.id, connected_workers)
 
-    status = "OpenGrid" if len(list(ids)) > 0 else ""
+    status = "OpenGrid"
 
     return Response(
         json.dumps({RESPONSE_MSG.SUCCESS: True, "status": status}),
@@ -142,7 +142,6 @@ def list_models():
     )
 
 
-## Will be removed when sockets can upload huge models
 @html.route("/serve-model/", methods=["POST"])
 @cross_origin()
 def serve_model():
@@ -150,6 +149,7 @@ def serve_model():
     model_id = request.form[MODEL.ID]
     allow_download = request.form[MODEL.ALLOW_DOWNLOAD] == "True"
     allow_remote_inference = request.form[MODEL.ALLOW_REMOTE_INFERENCE] == "True"
+    mpc = request.form[MODEL.MPC] == "True"
 
     if request.files:
         # If model is large, receive it by a stream channel
@@ -165,10 +165,15 @@ def serve_model():
     serialized_model = serialized_model.encode(encoding)
 
     # save the model for later usage
-    response = model_controller.save_model(
-        serialized_model, model_id, allow_download, allow_remote_inference
+    response = model_controller.save(
+        local_worker,
+        serialized_model,
+        model_id,
+        allow_download,
+        allow_remote_inference,
+        mpc,
     )
-    response = {}
+
     if response[RESPONSE_MSG.SUCCESS]:
         return Response(json.dumps(response), status=200, mimetype="application/json")
     else:

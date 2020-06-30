@@ -35,8 +35,8 @@ tests_require = ["pytest", "pytest-flake8"]
 
 
 setup(
-    name="gridnode",
-    version="0.0.0",
+    name="openmined.gridnode",
+    version="0.6.2",
     author="OpenMined",
     author_email="contact@openmined.org",
     description=(

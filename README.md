@@ -1,23 +1,23 @@
 ![pygrid-logo](https://raw.githubusercontent.com/OpenMined/design-assets/master/logos/PyGrid/horizontal-primary-trans.png)
 
-![Tests](https://github.com/OpenMined/GridNode/workflows/Run%20tests/badge.svg)
-![License](https://img.shields.io/github/license/OpenMined/GridNode)
+![Tests](https://github.com/OpenMined/PyGridNode/workflows/Run%20tests/badge.svg)
+![License](https://img.shields.io/github/license/OpenMined/PyGridNode)
 ![OpenCollective](https://img.shields.io/opencollective/all/openmined)
 
-# GridNode
+# PyGridNode
 
-GridNode helps to data owners manage their data, being the place where data lives. It is part of the [PyGrid Platform](https://github.com/OpenMined/PyGrid/):
+PyGridNode helps to data owners manage their data, being the place where data lives. It is part of the [PyGrid Platform](https://github.com/OpenMined/PyGrid/):
 - PyGrid.  A server based application used to manage/monitor/control and route grid Nodes/Workers remotely.
-- **GridNode**. A server based application used to store and manage data access in a secure and private way.
+- **PyGridNode**. A server based application used to store and manage data access in a secure and private way.
 - GridWorkers. Clientd based app that uses different Syft based libraries to perform federated learning (ex: syft.js, KotlinSyft, SwiftSyft).
 
 
 ## Installation
 
-Use the package manager pip to install GridNode
+Use the package manager pip to install PyGridNode
 
 ```bash
-git clone https://github.com/OpenMined/GridNode
+git clone https://github.com/OpenMined/PyGridNode
 pip install .
 ```
 
@@ -68,7 +68,7 @@ Please make sure to update tests as appropriate.
 
 ## Contributors
 
-See the list of [contributors](https://github.com/OpenMined/GridNode/contributors) who participated in this project.
+See the list of [contributors](https://github.com/OpenMined/PyGridNode/contributors) who participated in this project.
 
 ## Support
 For support in using this library, please join the  [**#lib_gridnode**](https://openmined.slack.com/archives/C012KC49JRL) Slack channel. If you’d like to follow along with any code changes to the library, please join the [**#code_gridnode**](https://openmined.slack.com/archives/C012S2CDMPU) Slack channel. [Click here to join our Slack community!](https://slack.openmined.org)
